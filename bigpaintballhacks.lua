@@ -23,7 +23,7 @@
         --Buggy for 3rd person games!
         --May cause heavy lag
     --If false, the aimbot will look for all players, even if they're behind a wall
-    _G.WRDAimBotWallcheck = false
+    _G.WRDAimBotWallcheck = true
     
     --[[ 
     
