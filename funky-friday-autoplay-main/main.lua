@@ -673,10 +673,9 @@ Groups.Keybinds = Tabs.Main:AddRightGroupbox('Keybinds')
 
 Groups.Configs = Tabs.Miscellaneous:AddRightGroupbox('Configs')
 Groups.Credits = Tabs.Miscellaneous:AddRightGroupbox('Credits')
-    Groups.Credits:AddLabel('<font color="#3da5ff">wally</font> - script')
-    Groups.Credits:AddLabel('<font color="#de6cff">Sezei</font> - contributor')
-    Groups.Credits:AddLabel('Inori - ui library')
-    Groups.Credits:AddLabel('Jan - old ui library')
+    Groups.Credits:AddLabel('<font color="#3da5ff">Sussy hacker</font> - script')
+    Groups.Credits:AddLabel('<font color="#de6cff">Rusty</font> - contributor')
+    Groups.Credits:AddLabel('Sussy hacker - ui library')
 
 
 Groups.Misc = Tabs.Miscellaneous:AddRightGroupbox('Miscellaneous')
@@ -685,7 +684,7 @@ Groups.Misc = Tabs.Miscellaneous:AddRightGroupbox('Miscellaneous')
     Groups.Misc:AddDivider()
     Groups.Misc:AddButton('Unload script', function() pcall(shared._unload) end)
     Groups.Misc:AddButton('Copy discord', function()
-        if pcall(setclipboard, "https://wally.cool/discord") then
+        if pcall(setclipboard, "https://discord.gg/9vQBZA3G35") then
             UI:Notify('Successfully copied discord link to your clipboard!', 5)
         end
     end)
