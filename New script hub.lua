@@ -65,7 +65,7 @@ local TextLabel_8 = Instance.new("TextLabel")
 --Properties:
 
 HackingGui.Name = "HackingGui"
-HackingGui.Parent = game.Workspace
+HackingGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 HackingGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainGui.Name = "MainGui"
@@ -75,6 +75,7 @@ MainGui.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainGui.BorderSizePixel = 0
 MainGui.Position = UDim2.new(0.269984126, 0, 0.199387774, 0)
 MainGui.Size = UDim2.new(0, 673, 0, 325)
+MainGui.Visible = false
 
 UICorner.CornerRadius = UDim.new(0, 12)
 UICorner.Parent = MainGui
@@ -222,7 +223,6 @@ LoadingGui.BorderColor3 = Color3.fromRGB(0, 0, 0)
 LoadingGui.BorderSizePixel = 0
 LoadingGui.Position = UDim2.new(0.354685038, 0, 0.23061496, 0)
 LoadingGui.Size = UDim2.new(0, 347, 0, 282)
-LoadingGui.Visible = false
 
 UICorner_10.CornerRadius = UDim.new(0, 12)
 UICorner_10.Parent = LoadingGui
@@ -595,7 +595,7 @@ TextLabel_8.TextWrapped = true
 
 -- Scripts:
 
-local function QXWYW_fake_script() -- CloseButton.LocalScript 
+local function XHGBA_fake_script() -- CloseButton.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton)
 
 	local gui = script.Parent.Parent.Parent.Parent:FindFirstChild("ConfirmationGui")
@@ -607,8 +607,8 @@ local function QXWYW_fake_script() -- CloseButton.LocalScript
 		gui.Visible = true
 	end)
 end
-coroutine.wrap(QXWYW_fake_script)()
-local function ZXFRQ_fake_script() -- Credits.LocalScript 
+coroutine.wrap(XHGBA_fake_script)()
+local function XYGL_fake_script() -- Credits.LocalScript 
 	local script = Instance.new('LocalScript', Credits)
 
 	local credits = script.Parent.Parent.Parent.Parent:FindFirstChild("CreditsGui")
@@ -618,8 +618,8 @@ local function ZXFRQ_fake_script() -- Credits.LocalScript
 		credits.Visible = true
 	end)
 end
-coroutine.wrap(ZXFRQ_fake_script)()
-local function FQQORO_fake_script() -- Script1.LocalScript 
+coroutine.wrap(XYGL_fake_script)()
+local function QURIIG_fake_script() -- Script1.LocalScript 
 	local script = Instance.new('LocalScript', Script1)
 
 	local button = script.Parent
@@ -628,8 +628,8 @@ local function FQQORO_fake_script() -- Script1.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Touch-Football/main/Football1"))()
 	end)
 end
-coroutine.wrap(FQQORO_fake_script)()
-local function DBXSRV_fake_script() -- Script1_2.LocalScript 
+coroutine.wrap(QURIIG_fake_script)()
+local function FGBRDI_fake_script() -- Script1_2.LocalScript 
 	local script = Instance.new('LocalScript', Script1_2)
 
 	local button = script.Parent
@@ -638,8 +638,8 @@ local function DBXSRV_fake_script() -- Script1_2.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/aroosh2022/all-hacks-from-now/main/aimbot.lua"))()
 	end)
 end
-coroutine.wrap(DBXSRV_fake_script)()
-local function MPJVT_fake_script() -- Script1_3.LocalScript 
+coroutine.wrap(FGBRDI_fake_script)()
+local function QMINDOC_fake_script() -- Script1_3.LocalScript 
 	local script = Instance.new('LocalScript', Script1_3)
 
 	local button = script.Parent
@@ -648,8 +648,8 @@ local function MPJVT_fake_script() -- Script1_3.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/aroosh2022/all-hacks-from-now/main/funky-friday-autoplay-main/main.lua"))()
 	end)
 end
-coroutine.wrap(MPJVT_fake_script)()
-local function WNWYBWZ_fake_script() -- MainThing.LocalScript 
+coroutine.wrap(QMINDOC_fake_script)()
+local function GDYEIL_fake_script() -- MainThing.LocalScript 
 	local script = Instance.new('LocalScript', MainThing)
 
 	local mainframe = script.Parent.Parent.Parent:FindFirstChild("MainGui")
@@ -672,8 +672,8 @@ local function WNWYBWZ_fake_script() -- MainThing.LocalScript
 	mainframe.Visible = true
 	loadingframe:Destroy()
 end
-coroutine.wrap(WNWYBWZ_fake_script)()
-local function VBQUX_fake_script() -- CloseButton_2.LocalScript 
+coroutine.wrap(GDYEIL_fake_script)()
+local function OUOMUYZ_fake_script() -- CloseButton_2.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_2)
 
 	local gui = script.Parent.Parent.Parent:FindFirstChild("MainGui")
@@ -685,8 +685,8 @@ local function VBQUX_fake_script() -- CloseButton_2.LocalScript
 		mu.Visible = false
 	end)
 end
-coroutine.wrap(VBQUX_fake_script)()
-local function RAJAOVK_fake_script() -- CloseButton_3.LocalScript 
+coroutine.wrap(OUOMUYZ_fake_script)()
+local function EFNUFKL_fake_script() -- CloseButton_3.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_3)
 
 	local gui = script.Parent.Parent.Parent:FindFirstChild("MainGui")
@@ -698,8 +698,8 @@ local function RAJAOVK_fake_script() -- CloseButton_3.LocalScript
 		mu.Visible = false
 	end)
 end
-coroutine.wrap(RAJAOVK_fake_script)()
-local function PEIVZV_fake_script() -- CloseButton_4.LocalScript 
+coroutine.wrap(EFNUFKL_fake_script)()
+local function DLCWUO_fake_script() -- CloseButton_4.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_4)
 
 	local gui = script.Parent.Parent.Parent.Parent
@@ -709,8 +709,8 @@ local function PEIVZV_fake_script() -- CloseButton_4.LocalScript
 		gui:Destroy()
 	end)
 end
-coroutine.wrap(PEIVZV_fake_script)()
-local function MBLB_fake_script() -- CloseButton_5.LocalScript 
+coroutine.wrap(DLCWUO_fake_script)()
+local function MWMFBTY_fake_script() -- CloseButton_5.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_5)
 
 	local mu = script.Parent.Parent.Parent:FindFirstChild("CreditsGui")
@@ -720,4 +720,4 @@ local function MBLB_fake_script() -- CloseButton_5.LocalScript
 		mu.Visible = false
 	end)
 end
-coroutine.wrap(MBLB_fake_script)()
+coroutine.wrap(MWMFBTY_fake_script)()
