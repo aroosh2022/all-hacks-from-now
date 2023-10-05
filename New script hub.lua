@@ -78,6 +78,7 @@ local TextLabel_9 = Instance.new("TextLabel")
 HackingGui.Name = "HackingGui"
 HackingGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 HackingGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+HackingGui.ResetOnSpawn = false
 
 MainGui.Name = "MainGui"
 MainGui.Parent = HackingGui
