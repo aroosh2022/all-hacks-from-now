@@ -1,4 +1,5 @@
--- Aroosh hacking gui
+-- Gui to Lua
+-- Version: 3.2
 
 -- Instances:
 
@@ -14,8 +15,8 @@ local MinimizeButton = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local TextLabel = Instance.new("TextLabel")
 local Body = Instance.new("ScrollingFrame")
-local UICorner_5 = Instance.new("UICorner")
 local UIListLayout = Instance.new("UIListLayout")
+local UICorner_5 = Instance.new("UICorner")
 local Credits = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local Script1 = Instance.new("TextButton")
@@ -28,10 +29,12 @@ local Script1_4 = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
 local Script = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
-local Script1_5 = Instance.new("TextButton")
+local Zangus = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
-local LoadingGui = Instance.new("Frame")
+local Script1_5 = Instance.new("TextButton")
 local UICorner_13 = Instance.new("UICorner")
+local LoadingGui = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
 local shadowHolder = Instance.new("Frame")
 local umbraShadow = Instance.new("ImageLabel")
 local penumbraShadow = Instance.new("ImageLabel")
@@ -40,9 +43,9 @@ local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
 local Pviewer = Instance.new("TextLabel")
 local CloseButton_2 = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
-local ConfirmationGui = Instance.new("Frame")
 local UICorner_15 = Instance.new("UICorner")
+local ConfirmationGui = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
 local shadowHolder_2 = Instance.new("Frame")
 local umbraShadow_2 = Instance.new("ImageLabel")
 local penumbraShadow_2 = Instance.new("ImageLabel")
@@ -51,13 +54,13 @@ local TextLabel_4 = Instance.new("TextLabel")
 local TextLabel_5 = Instance.new("TextLabel")
 local MainThing = Instance.new("TextLabel")
 local CloseButton_3 = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
-local CloseButton_4 = Instance.new("TextButton")
 local UICorner_17 = Instance.new("UICorner")
-local CloseButton_5 = Instance.new("TextButton")
+local CloseButton_4 = Instance.new("TextButton")
 local UICorner_18 = Instance.new("UICorner")
-local CreditsGui = Instance.new("Frame")
+local CloseButton_5 = Instance.new("TextButton")
 local UICorner_19 = Instance.new("UICorner")
+local CreditsGui = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
 local shadowHolder_3 = Instance.new("Frame")
 local umbraShadow_3 = Instance.new("ImageLabel")
 local penumbraShadow_3 = Instance.new("ImageLabel")
@@ -65,18 +68,18 @@ local ambientShadow_3 = Instance.new("ImageLabel")
 local TextLabel_6 = Instance.new("TextLabel")
 local TextLabel_7 = Instance.new("TextLabel")
 local CloseButton_6 = Instance.new("TextButton")
-local UICorner_20 = Instance.new("UICorner")
+local UICorner_21 = Instance.new("UICorner")
 local Credits_2 = Instance.new("TextLabel")
 local TextLabel_8 = Instance.new("TextLabel")
 local Alt_heading = Instance.new("Frame")
-local UICorner_21 = Instance.new("UICorner")
-local CloseButton_7 = Instance.new("TextButton")
 local UICorner_22 = Instance.new("UICorner")
-local MinimizeButton_2 = Instance.new("TextButton")
+local CloseButton_7 = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
+local MinimizeButton_2 = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
 local TextLabel_9 = Instance.new("TextLabel")
 local WarningGui = Instance.new("Frame")
-local UICorner_24 = Instance.new("UICorner")
+local UICorner_25 = Instance.new("UICorner")
 local shadowHolder_4 = Instance.new("Frame")
 local umbraShadow_4 = Instance.new("ImageLabel")
 local penumbraShadow_4 = Instance.new("ImageLabel")
@@ -85,11 +88,11 @@ local TextLabel_10 = Instance.new("TextLabel")
 local TextLabel_11 = Instance.new("TextLabel")
 local TextLabel_12 = Instance.new("TextLabel")
 local CloseButton_8 = Instance.new("TextButton")
-local UICorner_25 = Instance.new("UICorner")
-local CloseButton_9 = Instance.new("TextButton")
 local UICorner_26 = Instance.new("UICorner")
-local CloseButton_10 = Instance.new("TextButton")
+local CloseButton_9 = Instance.new("TextButton")
 local UICorner_27 = Instance.new("UICorner")
+local CloseButton_10 = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
 local MainText = Instance.new("TextLabel")
 
 --Properties:
@@ -174,13 +177,15 @@ Body.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Body.BorderSizePixel = 0
 Body.Position = UDim2.new(0.0252600294, 0, 0.166153848, 0)
 Body.Size = UDim2.new(0, 639, 0, 255)
-
-UICorner_5.Parent = Body
+Body.CanvasPosition = Vector2.new(0, 395)
 
 UIListLayout.Parent = Body
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0, 10)
+
+UICorner_5.CornerRadius = UDim.new(0, 12)
+UICorner_5.Parent = UIListLayout
 
 Credits.Name = "Credits"
 Credits.Parent = Body
@@ -278,21 +283,37 @@ Script.TextWrapped = true
 
 UICorner_11.Parent = Script
 
+Zangus.Name = "Zangus"
+Zangus.Parent = Script
+Zangus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Zangus.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Zangus.BorderSizePixel = 0
+Zangus.Position = UDim2.new(-0.00158432138, 0, 4.08263302, 0)
+Zangus.Size = UDim2.new(0, 565, 0, 40)
+Zangus.Font = Enum.Font.FredokaOne
+Zangus.Text = "---- New Script Coming Soon! ----"
+Zangus.TextColor3 = Color3.fromRGB(0, 0, 0)
+Zangus.TextScaled = true
+Zangus.TextSize = 14.000
+Zangus.TextWrapped = true
+
+UICorner_12.Parent = Zangus
+
 Script1_5.Name = "Script #1"
 Script1_5.Parent = Body
 Script1_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Script1_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Script1_5.BorderSizePixel = 0
-Script1_5.Position = UDim2.new(0.039123632, 0, 0.392156869, 0)
+Script1_5.Position = UDim2.new(0.384194046, 0, 0, 0)
 Script1_5.Size = UDim2.new(0, 565, 0, 40)
 Script1_5.Font = Enum.Font.FredokaOne
-Script1_5.Text = "---- New Script Coming Soon! ----"
+Script1_5.Text = "Evade"
 Script1_5.TextColor3 = Color3.fromRGB(0, 0, 0)
 Script1_5.TextScaled = true
 Script1_5.TextSize = 14.000
 Script1_5.TextWrapped = true
 
-UICorner_12.Parent = Script1_5
+UICorner_13.Parent = Script1_5
 
 LoadingGui.Name = "LoadingGui"
 LoadingGui.Parent = HackingGui
@@ -303,8 +324,8 @@ LoadingGui.Position = UDim2.new(0.354685038, 0, 0.23061496, 0)
 LoadingGui.Size = UDim2.new(0, 347, 0, 282)
 LoadingGui.Visible = false
 
-UICorner_13.CornerRadius = UDim.new(0, 12)
-UICorner_13.Parent = LoadingGui
+UICorner_14.CornerRadius = UDim.new(0, 12)
+UICorner_14.Parent = LoadingGui
 
 shadowHolder.Name = "shadowHolder"
 shadowHolder.Parent = LoadingGui
@@ -408,7 +429,7 @@ CloseButton_2.TextScaled = true
 CloseButton_2.TextSize = 14.000
 CloseButton_2.TextWrapped = true
 
-UICorner_14.Parent = CloseButton_2
+UICorner_15.Parent = CloseButton_2
 
 ConfirmationGui.Name = "ConfirmationGui"
 ConfirmationGui.Parent = HackingGui
@@ -419,8 +440,8 @@ ConfirmationGui.Position = UDim2.new(0.354251176, 0, 0.230717272, 0)
 ConfirmationGui.Size = UDim2.new(0, 347, 0, 282)
 ConfirmationGui.Visible = false
 
-UICorner_15.CornerRadius = UDim.new(0, 12)
-UICorner_15.Parent = ConfirmationGui
+UICorner_16.CornerRadius = UDim.new(0, 12)
+UICorner_16.Parent = ConfirmationGui
 
 shadowHolder_2.Name = "shadowHolder"
 shadowHolder_2.Parent = ConfirmationGui
@@ -524,7 +545,7 @@ CloseButton_3.TextScaled = true
 CloseButton_3.TextSize = 14.000
 CloseButton_3.TextWrapped = true
 
-UICorner_16.Parent = CloseButton_3
+UICorner_17.Parent = CloseButton_3
 
 CloseButton_4.Name = "CloseButton"
 CloseButton_4.Parent = ConfirmationGui
@@ -540,7 +561,7 @@ CloseButton_4.TextScaled = true
 CloseButton_4.TextSize = 14.000
 CloseButton_4.TextWrapped = true
 
-UICorner_17.Parent = CloseButton_4
+UICorner_18.Parent = CloseButton_4
 
 CloseButton_5.Name = "CloseButton"
 CloseButton_5.Parent = ConfirmationGui
@@ -556,7 +577,7 @@ CloseButton_5.TextScaled = true
 CloseButton_5.TextSize = 14.000
 CloseButton_5.TextWrapped = true
 
-UICorner_18.Parent = CloseButton_5
+UICorner_19.Parent = CloseButton_5
 
 CreditsGui.Name = "CreditsGui"
 CreditsGui.Parent = HackingGui
@@ -567,8 +588,8 @@ CreditsGui.Position = UDim2.new(0.354251176, 0, 0.230717272, 0)
 CreditsGui.Size = UDim2.new(0, 347, 0, 282)
 CreditsGui.Visible = false
 
-UICorner_19.CornerRadius = UDim.new(0, 12)
-UICorner_19.Parent = CreditsGui
+UICorner_20.CornerRadius = UDim.new(0, 12)
+UICorner_20.Parent = CreditsGui
 
 shadowHolder_3.Name = "shadowHolder"
 shadowHolder_3.Parent = CreditsGui
@@ -657,7 +678,7 @@ CloseButton_6.TextScaled = true
 CloseButton_6.TextSize = 14.000
 CloseButton_6.TextWrapped = true
 
-UICorner_20.Parent = CloseButton_6
+UICorner_21.Parent = CloseButton_6
 
 Credits_2.Name = "Credits"
 Credits_2.Parent = CreditsGui
@@ -697,7 +718,7 @@ Alt_heading.Position = UDim2.new(0.416340023, 0, 0.488490582, 0)
 Alt_heading.Size = UDim2.new(0, 229, 0, 28)
 Alt_heading.Visible = false
 
-UICorner_21.Parent = Alt_heading
+UICorner_22.Parent = Alt_heading
 
 CloseButton_7.Name = "CloseButton"
 CloseButton_7.Parent = Alt_heading
@@ -713,7 +734,7 @@ CloseButton_7.TextScaled = true
 CloseButton_7.TextSize = 14.000
 CloseButton_7.TextWrapped = true
 
-UICorner_22.Parent = CloseButton_7
+UICorner_23.Parent = CloseButton_7
 
 MinimizeButton_2.Name = "MinimizeButton"
 MinimizeButton_2.Parent = Alt_heading
@@ -729,7 +750,7 @@ MinimizeButton_2.TextScaled = true
 MinimizeButton_2.TextSize = 14.000
 MinimizeButton_2.TextWrapped = true
 
-UICorner_23.Parent = MinimizeButton_2
+UICorner_24.Parent = MinimizeButton_2
 
 TextLabel_9.Parent = Alt_heading
 TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -752,8 +773,8 @@ WarningGui.BorderSizePixel = 0
 WarningGui.Position = UDim2.new(0.213005349, 0, -2.7604363, 0)
 WarningGui.Size = UDim2.new(0, 347, 0, 282)
 
-UICorner_24.CornerRadius = UDim.new(0, 12)
-UICorner_24.Parent = WarningGui
+UICorner_25.CornerRadius = UDim.new(0, 12)
+UICorner_25.Parent = WarningGui
 
 shadowHolder_4.Name = "shadowHolder"
 shadowHolder_4.Parent = WarningGui
@@ -856,7 +877,7 @@ CloseButton_8.TextScaled = true
 CloseButton_8.TextSize = 14.000
 CloseButton_8.TextWrapped = true
 
-UICorner_25.Parent = CloseButton_8
+UICorner_26.Parent = CloseButton_8
 
 CloseButton_9.Name = "CloseButton"
 CloseButton_9.Parent = WarningGui
@@ -872,7 +893,7 @@ CloseButton_9.TextScaled = true
 CloseButton_9.TextSize = 14.000
 CloseButton_9.TextWrapped = true
 
-UICorner_26.Parent = CloseButton_9
+UICorner_27.Parent = CloseButton_9
 
 CloseButton_10.Name = "CloseButton"
 CloseButton_10.Parent = WarningGui
@@ -888,7 +909,7 @@ CloseButton_10.TextScaled = true
 CloseButton_10.TextSize = 14.000
 CloseButton_10.TextWrapped = true
 
-UICorner_27.Parent = CloseButton_10
+UICorner_28.Parent = CloseButton_10
 
 MainText.Name = "MainText"
 MainText.Parent = WarningGui
@@ -907,7 +928,7 @@ MainText.TextWrapped = true
 
 -- Scripts:
 
-local function CPVP_fake_script() -- CloseButton.LocalScript 
+local function BAVGAC_fake_script() -- CloseButton.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton)
 
 	local gui = script.Parent.Parent.Parent.Parent:FindFirstChild("ConfirmationGui")
@@ -920,8 +941,8 @@ local function CPVP_fake_script() -- CloseButton.LocalScript
 		gui.Visible = true
 	end)
 end
-coroutine.wrap(CPVP_fake_script)()
-local function KGCLPU_fake_script() -- Heading.MoveAbility 
+coroutine.wrap(BAVGAC_fake_script)()
+local function XNFLSC_fake_script() -- Heading.MoveAbility 
 	local script = Instance.new('LocalScript', Heading)
 
 	local UIS = game:GetService("UserInputService")
@@ -960,8 +981,8 @@ local function KGCLPU_fake_script() -- Heading.MoveAbility
 	end)
 	
 end
-coroutine.wrap(KGCLPU_fake_script)()
-local function TKPTMJN_fake_script() -- MinimizeButton.LocalScript 
+coroutine.wrap(XNFLSC_fake_script)()
+local function OSHL_fake_script() -- MinimizeButton.LocalScript 
 	local script = Instance.new('LocalScript', MinimizeButton)
 
 	local gui = script.Parent.Parent.Parent.Parent:FindFirstChild("MainGui")
@@ -974,8 +995,8 @@ local function TKPTMJN_fake_script() -- MinimizeButton.LocalScript
 		gui.Visible = false
 	end)
 end
-coroutine.wrap(TKPTMJN_fake_script)()
-local function BNBTO_fake_script() -- Credits.LocalScript 
+coroutine.wrap(OSHL_fake_script)()
+local function UYYWMCW_fake_script() -- Credits.LocalScript 
 	local script = Instance.new('LocalScript', Credits)
 
 	local credits = script.Parent.Parent.Parent.Parent:FindFirstChild("CreditsGui")
@@ -985,8 +1006,8 @@ local function BNBTO_fake_script() -- Credits.LocalScript
 		credits.Visible = true
 	end)
 end
-coroutine.wrap(BNBTO_fake_script)()
-local function YJKHMR_fake_script() -- Script1.LocalScript 
+coroutine.wrap(UYYWMCW_fake_script)()
+local function EJZVJNO_fake_script() -- Script1.LocalScript 
 	local script = Instance.new('LocalScript', Script1)
 
 	local button = script.Parent
@@ -995,8 +1016,8 @@ local function YJKHMR_fake_script() -- Script1.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Touch-Football/main/Football1"))()
 	end)
 end
-coroutine.wrap(YJKHMR_fake_script)()
-local function KNIFFD_fake_script() -- Script1_2.LocalScript 
+coroutine.wrap(EJZVJNO_fake_script)()
+local function IEQOCF_fake_script() -- Script1_2.LocalScript 
 	local script = Instance.new('LocalScript', Script1_2)
 
 	local button = script.Parent
@@ -1005,8 +1026,8 @@ local function KNIFFD_fake_script() -- Script1_2.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/aroosh2022/all-hacks-from-now/main/aimbot.lua"))()
 	end)
 end
-coroutine.wrap(KNIFFD_fake_script)()
-local function ITWFUBT_fake_script() -- Script1_3.LocalScript 
+coroutine.wrap(IEQOCF_fake_script)()
+local function ESBAV_fake_script() -- Script1_3.LocalScript 
 	local script = Instance.new('LocalScript', Script1_3)
 
 	local button = script.Parent
@@ -1015,8 +1036,8 @@ local function ITWFUBT_fake_script() -- Script1_3.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/aroosh2022/all-hacks-from-now/main/funky-friday-autoplay-main/main.lua"))()
 	end)
 end
-coroutine.wrap(ITWFUBT_fake_script)()
-local function WBFU_fake_script() -- Script1_4.LocalScript 
+coroutine.wrap(ESBAV_fake_script)()
+local function NJZAAT_fake_script() -- Script1_4.LocalScript 
 	local script = Instance.new('LocalScript', Script1_4)
 
 	local button = script.Parent
@@ -1025,8 +1046,8 @@ local function WBFU_fake_script() -- Script1_4.LocalScript
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
 	end)
 end
-coroutine.wrap(WBFU_fake_script)()
-local function ANTDSV_fake_script() -- Script.LocalScript 
+coroutine.wrap(NJZAAT_fake_script)()
+local function SJYSXG_fake_script() -- Script.LocalScript 
 	local script = Instance.new('LocalScript', Script)
 
 	local button = script.Parent
@@ -1035,8 +1056,18 @@ local function ANTDSV_fake_script() -- Script.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 	end)
 end
-coroutine.wrap(ANTDSV_fake_script)()
-local function FQKML_fake_script() -- LoadingGui.LocalScript 
+coroutine.wrap(SJYSXG_fake_script)()
+local function VYAZ_fake_script() -- Script1_5.LocalScript 
+	local script = Instance.new('LocalScript', Script1_5)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
+	end)
+end
+coroutine.wrap(VYAZ_fake_script)()
+local function YLWXTJC_fake_script() -- LoadingGui.LocalScript 
 	local script = Instance.new('LocalScript', LoadingGui)
 
 	local mainframe = script.Parent.Parent:FindFirstChild("MainGui")
@@ -1057,8 +1088,8 @@ local function FQKML_fake_script() -- LoadingGui.LocalScript
 	mainframe.Visible = true
 	loadingframe:Destroy()
 end
-coroutine.wrap(FQKML_fake_script)()
-local function HJHYRKE_fake_script() -- CloseButton_2.LocalScript 
+coroutine.wrap(YLWXTJC_fake_script)()
+local function YMNG_fake_script() -- CloseButton_2.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_2)
 
 	local main = script.Parent.Parent.Parent
@@ -1068,8 +1099,8 @@ local function HJHYRKE_fake_script() -- CloseButton_2.LocalScript
 		main:Destroy()
 	end)
 end
-coroutine.wrap(HJHYRKE_fake_script)()
-local function UDQGUYS_fake_script() -- LoadingGui.MoveAbility 
+coroutine.wrap(YMNG_fake_script)()
+local function ZFYXV_fake_script() -- LoadingGui.MoveAbility 
 	local script = Instance.new('LocalScript', LoadingGui)
 
 	local UIS = game:GetService("UserInputService")
@@ -1107,8 +1138,8 @@ local function UDQGUYS_fake_script() -- LoadingGui.MoveAbility
 	end)
 	
 end
-coroutine.wrap(UDQGUYS_fake_script)()
-local function BWCPI_fake_script() -- CloseButton_3.LocalScript 
+coroutine.wrap(ZFYXV_fake_script)()
+local function XNUHN_fake_script() -- CloseButton_3.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_3)
 
 	local gui = script.Parent.Parent.Parent:FindFirstChild("MainGui")
@@ -1120,8 +1151,8 @@ local function BWCPI_fake_script() -- CloseButton_3.LocalScript
 		mu.Visible = false
 	end)
 end
-coroutine.wrap(BWCPI_fake_script)()
-local function QSOF_fake_script() -- CloseButton_4.LocalScript 
+coroutine.wrap(XNUHN_fake_script)()
+local function NCMJNJ_fake_script() -- CloseButton_4.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_4)
 
 	local gui = script.Parent.Parent.Parent:FindFirstChild("MainGui")
@@ -1133,8 +1164,8 @@ local function QSOF_fake_script() -- CloseButton_4.LocalScript
 		mu.Visible = false
 	end)
 end
-coroutine.wrap(QSOF_fake_script)()
-local function SJNUYIW_fake_script() -- CloseButton_5.LocalScript 
+coroutine.wrap(NCMJNJ_fake_script)()
+local function IHXHGS_fake_script() -- CloseButton_5.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_5)
 
 	local gui = script.Parent.Parent.Parent.Parent
@@ -1144,8 +1175,8 @@ local function SJNUYIW_fake_script() -- CloseButton_5.LocalScript
 		gui:Destroy()
 	end)
 end
-coroutine.wrap(SJNUYIW_fake_script)()
-local function BXLPI_fake_script() -- ConfirmationGui.MoveAbility 
+coroutine.wrap(IHXHGS_fake_script)()
+local function BYLCKJ_fake_script() -- ConfirmationGui.MoveAbility 
 	local script = Instance.new('LocalScript', ConfirmationGui)
 
 	local UIS = game:GetService("UserInputService")
@@ -1183,8 +1214,8 @@ local function BXLPI_fake_script() -- ConfirmationGui.MoveAbility
 	end)
 	
 end
-coroutine.wrap(BXLPI_fake_script)()
-local function WGKM_fake_script() -- CloseButton_6.LocalScript 
+coroutine.wrap(BYLCKJ_fake_script)()
+local function FVVWH_fake_script() -- CloseButton_6.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_6)
 
 	local mu = script.Parent.Parent.Parent:FindFirstChild("CreditsGui")
@@ -1194,8 +1225,8 @@ local function WGKM_fake_script() -- CloseButton_6.LocalScript
 		mu.Visible = false
 	end)
 end
-coroutine.wrap(WGKM_fake_script)()
-local function HKEAC_fake_script() -- CreditsGui.MoveAbility 
+coroutine.wrap(FVVWH_fake_script)()
+local function KRHG_fake_script() -- CreditsGui.MoveAbility 
 	local script = Instance.new('LocalScript', CreditsGui)
 
 	local UIS = game:GetService("UserInputService")
@@ -1233,8 +1264,8 @@ local function HKEAC_fake_script() -- CreditsGui.MoveAbility
 	end)
 	
 end
-coroutine.wrap(HKEAC_fake_script)()
-local function SHGN_fake_script() -- CloseButton_7.LocalScript 
+coroutine.wrap(KRHG_fake_script)()
+local function FGLXPHU_fake_script() -- CloseButton_7.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_7)
 
 	local gui = script.Parent.Parent.Parent.Parent:FindFirstChild("ConfirmationGui")
@@ -1246,8 +1277,8 @@ local function SHGN_fake_script() -- CloseButton_7.LocalScript
 		gui.Visible = true
 	end)
 end
-coroutine.wrap(SHGN_fake_script)()
-local function XVYGI_fake_script() -- MinimizeButton_2.LocalScript 
+coroutine.wrap(FGLXPHU_fake_script)()
+local function MLPDNY_fake_script() -- MinimizeButton_2.LocalScript 
 	local script = Instance.new('LocalScript', MinimizeButton_2)
 
 	local gui = script.Parent.Parent.Parent:FindFirstChild("MainGui")
@@ -1260,8 +1291,8 @@ local function XVYGI_fake_script() -- MinimizeButton_2.LocalScript
 		gui.Visible = true
 	end)
 end
-coroutine.wrap(XVYGI_fake_script)()
-local function KLKG_fake_script() -- Alt_heading.MoveAbility 
+coroutine.wrap(MLPDNY_fake_script)()
+local function ZJFWZT_fake_script() -- Alt_heading.MoveAbility 
 	local script = Instance.new('LocalScript', Alt_heading)
 
 	local UIS = game:GetService("UserInputService")
@@ -1299,8 +1330,8 @@ local function KLKG_fake_script() -- Alt_heading.MoveAbility
 	end)
 	
 end
-coroutine.wrap(KLKG_fake_script)()
-local function LUMC_fake_script() -- HackingGui.ScriptBugFixer 
+coroutine.wrap(ZJFWZT_fake_script)()
+local function VREPCGJ_fake_script() -- HackingGui.ScriptBugFixer 
 	local script = Instance.new('LocalScript', HackingGui)
 
 	local GUI = script.Parent
@@ -1323,10 +1354,10 @@ local function LUMC_fake_script() -- HackingGui.ScriptBugFixer
 	
 	GUI.ResetOnSpawn = false
 end
-coroutine.wrap(LUMC_fake_script)()
+coroutine.wrap(VREPCGJ_fake_script)()
 -- HackingGui.Unadded features(beta) is disabled.
 -- nil.Feature #1 : warning gui is disabled.
-local function YACNNY_fake_script() -- CloseButton_8.LocalScript 
+local function VWWKOB_fake_script() -- CloseButton_8.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_8)
 
 	local gui = script.Parent.Parent.Parent:FindFirstChild("MainGui")
@@ -1338,8 +1369,8 @@ local function YACNNY_fake_script() -- CloseButton_8.LocalScript
 		mu.Visible = false
 	end)
 end
-coroutine.wrap(YACNNY_fake_script)()
-local function SLVGDRY_fake_script() -- CloseButton_9.LocalScript 
+coroutine.wrap(VWWKOB_fake_script)()
+local function ZZRV_fake_script() -- CloseButton_9.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_9)
 
 	local gui = script.Parent.Parent.Parent:FindFirstChild("MainGui")
@@ -1351,8 +1382,8 @@ local function SLVGDRY_fake_script() -- CloseButton_9.LocalScript
 		mu.Visible = false
 	end)
 end
-coroutine.wrap(SLVGDRY_fake_script)()
-local function PHRDOJC_fake_script() -- CloseButton_10.LocalScript 
+coroutine.wrap(ZZRV_fake_script)()
+local function GVCF_fake_script() -- CloseButton_10.LocalScript 
 	local script = Instance.new('LocalScript', CloseButton_10)
 
 	local gui = script.Parent.Parent.Parent.Parent
@@ -1362,4 +1393,4 @@ local function PHRDOJC_fake_script() -- CloseButton_10.LocalScript
 		gui:Destroy()
 	end)
 end
-coroutine.wrap(PHRDOJC_fake_script)()
+coroutine.wrap(GVCF_fake_script)()
